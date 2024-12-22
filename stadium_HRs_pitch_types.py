@@ -2,14 +2,9 @@
 # coding: utf-8
 
 # In[1]:
-
-
 pip install pybaseball pandas
 
-
 # In[34]:
-
-
 from pybaseball import statcast
 import pandas as pd
 
@@ -113,7 +108,7 @@ def fetch_home_run_data(start_date, end_date):
     return home_run_details
 
 # Fetch data for April 2024
-home_run_data = fetch_home_run_data("2024-04-01", "2024-04-10")
+home_run_data = fetch_home_run_data("2024-04-01", "2024-09-30") 
 
 # If data was returned, print the first 5 rows of the data table
 if home_run_data is not None:
@@ -121,14 +116,8 @@ if home_run_data is not None:
     print(home_run_data.head())
 
     # Save to CSV for further analysis
-    output_path = r"C:\Users\JoshuaGoldberg\OneDrive - happify.com\Desktop\stadium_analysis\mlb_home_runs_april_2024.csv"
+    output_path = r"C:\Users\JoshuaGoldberg\OneDrive - happify.com\Desktop\stadium_analysis\stadium_pitch_type_homers_2024.csv"
     home_run_data.to_csv(output_path, index=False)
 
     print(f"Home run data saved to '{output_path}'")
-
-
-# In[ ]:
-
-
-
 
